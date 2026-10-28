@@ -15,31 +15,8 @@ class EmployeePortalApp extends StatelessWidget {
       title: 'Employee Portal',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
-      home: Scaffold(
-        backgroundColor: Colors.blueGrey[900],
-        body: Center(
-          child: Container(
-            width: 410,
-            height: 820,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(36),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.black54,
-                  blurRadius: 25,
-                  spreadRadius: 5,
-                ),
-              ],
-              border: Border.all(color: Colors.black, width: 10),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(26),
-              child: const _AuthGate(),
-            ),
-          ),
-        ),
-      ),
+      // تم إزالة إطار الموبايل والـ Container، وأصبح التطبيق يملى الشاشة بالكامل
+      home: const _AuthGate(),
     );
   }
 }

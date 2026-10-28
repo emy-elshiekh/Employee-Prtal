@@ -41,15 +41,21 @@ class _MainShellState extends State<MainShell> {
           ),
         ],
       ),
-      body: screens[_index],
+      body: SizedBox.expand(
+        child: screens[_index],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _index,
         onTap: (i) => setState(() => _index = i),
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.fingerprint), label: 'Attendance'),
-          BottomNavigationBarItem(icon: Icon(Icons.event_note_outlined), label: 'Leaves'),
-          BottomNavigationBarItem(icon: Icon(Icons.receipt_long_outlined), label: 'Payslips'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.fingerprint), label: 'Attendance'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.event_note_outlined), label: 'Leaves'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.receipt_long_outlined), label: 'Payslips'),
         ],
       ),
     );
